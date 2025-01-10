@@ -1,0 +1,40 @@
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     
+
+
+ }
+
+ th,
+ td {
+     border: 1px solid black;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f2f2f2;
+ }
+
+ .contact {
+     padding: 1vw;
+     margin-top: 8%;
+ }
+
+ .hed {
+     display: flex;
+     margin: 2vw 0;
+     justify-content: space-between;
+     padding-right: 1vw;
+
+ }
+ #searchInput{
+    box-shadow: 2px 2px 1px 1px #000000b3;
+ }
+
+
+
+ a {
+     text-decoration: none;
+ }
