@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/helplines.css">
+        <link rel="shortcut icon" href="./images/android-chrome-192x192.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="flex">
+        <img src="./images/Screenshot 2024-03-22 085304.png" alt="logo">
+            <ul class="flex">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./videos.html">Videos</a></li>
+                <li><a href="./gadgets.html">Gadgets</a></li>
+                <li><a href="./helplines.html">Helplines</a></li>
+                <li><a href="./rights.html">Women's Rights</a></li>
+                <!-- <li><a href="./about.html">About Us</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact">
+        <div class="hed">
+
+            <h2>Women's Helpline Numbers in India</h2>
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for helpline names...">
+        </div>
+        
+    <table>
+        <tr>
+            <th>Helpline</th>
+            <th>Contact Number</th>
+        </tr>
+        <tr>
+            <td>Women Helpline (All India)</td>
+            <td><a href="tel:1091">1091</a></td>
+        </tr>
+        <tr>
+            <td>Women Helpline Domestic Abuse</td>
+            <td><a href="tel:181">181</a></td>
+        </tr>
+        <tr>
+            <td>Police</td>
+            <td><a href="tel:112">112</a> or <a href="tel:100">100</a></td>
+        </tr>
+        <tr>
+            <td>National Commission for Women (NCW) - Domestic Violence 24x7 Helpline</td>
+            <td><a href="tel:7827170170">7827170170</a></td>
+        </tr>
+        <tr>
+            <td>National Commission for Women (NCW) - General Helpline</td>
+            <td><a href="tel:01126942369">011-26942369</a>, <a href="tel:01126944754">26944754</a></td>
+        </tr>
+        <tr>
+            <td>National Human Rights Commission</td>
+            <td><a href="tel:01123385368">011-23385368</a> or <a href="tel:9810298900">9810298900</a></td>
+        </tr>
+        <tr>
+            <td>State-Wise Women Helpline - National Commission for Women</td>
+            <td><a href="tel:01123237166">011-23237166</a>, <a href="tel:01123234918">23234918</a></td>
+        </tr>
+        <tr>
+            <td>State-Wise Women Helpline - Delhi Commission for Women</td>
+            <td><a href="tel:01123379181">011-23379181</a>, <a href="tel:01123370597">23370597</a></td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
